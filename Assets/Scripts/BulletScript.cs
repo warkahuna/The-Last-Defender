@@ -19,17 +19,24 @@ public class BulletScript : MonoBehaviour {
     {
         gameObject.SetActive(false);
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+           // Destroy(other.gameObject);
+            gameObject.SetActive(false);
+        }
+    }
 
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.tag == "Enemy")
         {
             //Destroy(collision.gameObject);
-            Debug.Log(collision.gameObject);
             Debug.Log("hello");
             //gameObject.SetActive(false);
         }
-    }
+    }*/
 
 
 }

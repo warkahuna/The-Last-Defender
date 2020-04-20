@@ -57,5 +57,15 @@ public class MonsterMovement : MonoBehaviour
             }
         }
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Bullet")
+        {
+            Debug.Log("get hit");
+            
+            anim.ResetTrigger("isRunning");
+            anim.SetTrigger("RunningToGetHit");
+            //anim.SetTrigger("GetHitToRunning");
+        }
+    }
 }
