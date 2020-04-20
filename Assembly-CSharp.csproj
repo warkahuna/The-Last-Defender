@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ArtWorks\FREE GatlingGun\Turrets\Gatling Gun\Scripts\GatlingGun.cs" />
     <Compile Include="Assets\ArtWorks\Golem\script\CameraRotate.cs" />
     <Compile Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
@@ -112,8 +113,10 @@
     <Compile Include="Assets\ArtWorks\Sci Fi Assets\Simple SciFi Gun Turret Set\Scripts\CameraMouseDrag.cs" />
     <Compile Include="Assets\ArtWorks\Sci Fi Assets\Simple SciFi Gun Turret Set\Scripts\CameraMouseRotate.cs" />
     <Compile Include="Assets\ArtWorks\Sci Fi Assets\Simple SciFi Gun Turret Set\Scripts\MoveMe.cs" />
+    <Compile Include="Assets\Scripts\BulletScript.cs" />
     <Compile Include="Assets\Scripts\MonsterMovement.cs" />
     <Compile Include="Assets\Scripts\MoveTurret.cs" />
+    <Compile Include="Assets\Scripts\Shooting.cs" />
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\ArtWorks\Golem\shader\Toon2side-Lighted.shader" />
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
@@ -130,6 +133,7 @@
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Resources\Shaders\Uber.shader" />
+    <None Include="Assets\ArtWorks\FREE GatlingGun\ReadMe.txt" />
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Resources\Shaders\Blit.shader" />
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
