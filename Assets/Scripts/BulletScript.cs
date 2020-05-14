@@ -23,7 +23,7 @@ public class BulletScript : MonoBehaviour {
     {
         if (other.tag == "Enemy")
         {
-           // Destroy(other.gameObject);
+           //Destroy(other.gameObject);
             gameObject.SetActive(false);
         }
     }
