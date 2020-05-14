@@ -80,29 +80,10 @@ public class MoveTurret : MonoBehaviour
             Vector3 targetPoint = ray.GetPoint(hitdist);
 
             // Determine the target rotation.  This is the rotation if the transform looks at the target point.
-            if(transform.localEulerAngles.y >= 80 && transform.localEulerAngles.y <= 280)
-            {
-                Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
+            Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
 
-                // Smoothly rotate towards the target point.
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
-                
-                if(transform.localEulerAngles.y > 280)
-                {
-                    transform.localEulerAngles = new Vector3(transform.eulerAngles.x,
-                                                             280,
-                                                             transform.eulerAngles.z
-                                                             );
-                }
-                else if (transform.localEulerAngles.y < 80 )
-                {
-                    transform.localEulerAngles = new Vector3(transform.eulerAngles.x,
-                                                             80,
-                                                             transform.eulerAngles.z
-                                                             );
-                }
-            }
-            
+            // Smoothly rotate towards the target point.
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
         }
     }
 }

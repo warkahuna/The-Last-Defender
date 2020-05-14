@@ -6,8 +6,8 @@ public class MonsterMovement : MonoBehaviour
 {
     public Transform Player;
     public float MoveSpeed = 1;
-    public float MaxDist = 11;
-    public float MinDist = 10;
+    public float MaxDist = 10;
+    public float MinDist = 5;
     private Animator anim;
     private bool start = false;
     // Start is called before the first frame update
