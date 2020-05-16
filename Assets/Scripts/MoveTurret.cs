@@ -23,20 +23,20 @@ public class MoveTurret : MonoBehaviour
             //rotate1();
             rotate3();
         }
-       
+
     }
 
     void rotate1()
     {
         //Get mouse position
         Vector3 mousePos = Input.mousePosition;
-        
+
         //Adjust mouse z position
         mousePos.z = cam.transform.position.y - transform.position.y;
 
         //Get a world position for the mouse
         Vector3 mouseWorldPos = cam.ScreenToWorldPoint(mousePos);
-        
+
         //Get the angle to rotate and rotate
         float angle = -Mathf.Atan2(transform.position.z - mouseWorldPos.z, transform.position.x - mouseWorldPos.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, angle, 0), rotateSpeed * Time.deltaTime);
@@ -80,10 +80,29 @@ public class MoveTurret : MonoBehaviour
             Vector3 targetPoint = ray.GetPoint(hitdist);
 
             // Determine the target rotation.  This is the rotation if the transform looks at the target point.
-            Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
+            if (transform.localEulerAngles.y >= 80 && transform.localEulerAngles.y <= 280)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
 
-            // Smoothly rotate towards the target point.
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
+                // Smoothly rotate towards the target point.
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
+
+                if (transform.localEulerAngles.y > 280)
+                {
+                    transform.localEulerAngles = new Vector3(transform.eulerAngles.x,
+                                                             280,
+                                                             transform.eulerAngles.z
+                                                             );
+                }
+                else if (transform.localEulerAngles.y < 80)
+                {
+                    transform.localEulerAngles = new Vector3(transform.eulerAngles.x,
+                                                             80,
+                                                             transform.eulerAngles.z
+                                                             );
+                }
+            }
+
         }
     }
 }

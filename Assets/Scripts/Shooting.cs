@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,6 +35,7 @@ public class Shooting : MonoBehaviour
                 bulletList[i].transform.position = transform.position;
                 bulletList[i].transform.rotation = transform.rotation;
                 bulletList[i].SetActive(true);
+                
                 Rigidbody tempRigidBodyBullet = bulletList[i].GetComponent<Rigidbody>();
                 tempRigidBodyBullet.AddForce(tempRigidBodyBullet.transform.forward * bulletSpeed);
                 break;

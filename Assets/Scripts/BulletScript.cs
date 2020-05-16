@@ -7,6 +7,7 @@ public class BulletScript : MonoBehaviour {
     private void OnEnable()
     {
         transform.GetComponent<Rigidbody>().WakeUp();
+        //transform.Rotate(new Vector3(90, 0, 0), 90);
         Invoke("hideBullet", 2f);
     }
 
