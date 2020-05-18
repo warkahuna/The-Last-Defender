@@ -24,8 +24,7 @@ public class MonsterMovement : MonoBehaviour
     public Slider slider;
 
     public float damage;
-
-
+    public GameObject killCounter;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,11 +35,13 @@ public class MonsterMovement : MonoBehaviour
         hp = maxHp;
         slider.value = calculateHealth();
         damage = GameObject.FindGameObjectWithTag("Gun").GetComponent<Upgrade>().damage;
+        killCounter = GameObject.FindGameObjectWithTag("KillCounter");
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         /*if (Input.GetKeyDown("z"))
         {
             start = true;
@@ -124,6 +125,7 @@ public class MonsterMovement : MonoBehaviour
         if (other.tag == "Player")
         {
             killed();
+            Upgrade.damagedHp(1); //1 represents the health lowerd from player
         }
         if (other.tag == "Gun")
         {
@@ -154,7 +156,6 @@ public class MonsterMovement : MonoBehaviour
                 //lookingAt = false;
                 //transform.position += Vector3.left * MoveSpeed*2 * Time.deltaTime;
                 
-
             }
         }
 
@@ -170,5 +171,6 @@ public class MonsterMovement : MonoBehaviour
     public void killed()
     {
         Destroy(gameObject);
+        KillCounter.addKills(1);
     }
 }

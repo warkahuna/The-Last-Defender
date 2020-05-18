@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - background
   - Gun
+  - KillCounter
+  - GunBarrel
   layers:
   - Default
   - TransparentFX

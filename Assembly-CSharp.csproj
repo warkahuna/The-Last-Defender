@@ -128,6 +128,7 @@
     <Compile Include="Assets\ArtWorks\VolumetricLines\Scripts\VolumetricLineVertexData.cs" />
     <Compile Include="Assets\Scripts\BulletScript.cs" />
     <Compile Include="Assets\Scripts\EnemyHp.cs" />
+    <Compile Include="Assets\Scripts\KillCounter.cs" />
     <Compile Include="Assets\Scripts\MonsterMovement.cs" />
     <Compile Include="Assets\Scripts\MoveTurret.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
