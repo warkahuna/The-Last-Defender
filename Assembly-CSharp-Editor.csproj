@@ -97,6 +97,8 @@
     <Compile Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Editor\Utils\EditorResources.cs" />
     <Compile Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Editor\Utils\FxStyles.cs" />
     <Compile Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
+    <Compile Include="Assets\ArtWorks\Simple Health Bar\Editor\SimpleHealthBarEditor.cs" />
+    <Compile Include="Assets\ArtWorks\Simple Health Bar\Editor\SimpleHealthBarWindow.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>F:/unity projects/The-Last-Defender/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>

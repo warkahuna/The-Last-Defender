@@ -5,9 +5,11 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject spawnee;
+    public GameObject bossSpawnee;  
     public bool stopSpawning = false;
     public float spawnTime;
     public float spawnDelay;
+    public float spawnedNumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,17 +19,32 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(spawnedNumber == 0)
+        {
+            stopSpawning = false;
+            Invoke("spawnBossObject", spawnDelay);
+            spawnedNumber = -1;
+        }
         
     }
 
 
     public void spawnObject()
     {
-        Instantiate(spawnee, transform.position, transform.rotation);
-        if(stopSpawning)
+        if(spawnedNumber > 0)
         {
-            CancelInvoke("spawnObject");
+            spawnedNumber--;
+            Instantiate(spawnee, transform.position, transform.rotation);
+            if (stopSpawning)
+            {
+                CancelInvoke("spawnObject");
+            }
         }
 
+    }
+
+    public void spawnBossObject()
+    {
+        Instantiate(bossSpawnee, transform.position, transform.rotation);
     }
 }
