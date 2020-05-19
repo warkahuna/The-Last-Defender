@@ -134,6 +134,7 @@
     <Compile Include="Assets\Scripts\DragPanel.cs" />
     <Compile Include="Assets\Scripts\DropMe.cs" />
     <Compile Include="Assets\Scripts\EnemyHp.cs" />
+    <Compile Include="Assets\Scripts\KillCounter.cs" />
     <Compile Include="Assets\Scripts\LoadingScrpt.cs" />
     <Compile Include="Assets\Scripts\MonsterMovement.cs" />
     <Compile Include="Assets\Scripts\MoveTurret.cs" />
