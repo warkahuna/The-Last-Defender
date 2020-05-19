@@ -137,8 +137,10 @@
     <Compile Include="Assets\Scripts\KillCounter.cs" />
     <Compile Include="Assets\Scripts\LoadingScrpt.cs" />
     <Compile Include="Assets\Scripts\MonsterMovement.cs" />
+    <Compile Include="Assets\Scripts\MoveScript.cs" />
     <Compile Include="Assets\Scripts\MoveTurret.cs" />
     <Compile Include="Assets\Scripts\PanelManager.cs" />
+    <Compile Include="Assets\Scripts\PlaneRotation.cs" />
     <Compile Include="Assets\Scripts\ResizePanel.cs" />
     <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
@@ -147,6 +149,8 @@
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\TiltWindow.cs" />
     <Compile Include="Assets\Scripts\Upgrade.cs" />
+    <Compile Include="Assets\TAZO_3D_C\DemoScene\Action_Manage.cs" />
+    <Compile Include="Assets\TAZO_3D_C\DemoScene\demo.cs" />
     <Compile Include="Assets\loadingBar\scripts\Loading.cs" />
     <Compile Include="Assets\loadingBar\scripts\SimpleLoading.cs" />
     <Compile Include="Assets\loadingBar\scripts\loadingbar.cs" />
@@ -167,6 +171,7 @@
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
     <None Include="Assets\ArtWorks\Rhino\Sheder\StandardDoubleSided.shader" />
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+    <None Include="Assets\TAZO_3D_C\Creature\Egg_Minions\Shader\Cartoon_a_without_outline.shader" />
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Resources\Shaders\LutGen.shader" />
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
@@ -213,6 +218,8 @@
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Resources\Shaders\Bloom.cginc" />
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
     <None Include="Assets\ArtWorks\Sci Fi Assets\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
+    <None Include="Assets\TAZO_3D_C\Creature\Egg_Minions\Shader\Cartoon.shader" />
+    <None Include="Assets\TAZO_3D_C\Creature\Egg_Minions\Shader\Cartoon_culloff.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>F:/unity Projects/The-Last-Defender/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
