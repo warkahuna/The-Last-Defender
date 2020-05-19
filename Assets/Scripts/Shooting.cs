@@ -13,7 +13,7 @@ public class Shooting : MonoBehaviour
     private float reload;
     private float reloadSpeed = 0.1f;
 
-    //AudioSource bulletAudio;
+    AudioSource bulletAudio;
 
     List<GameObject> bulletList;
 
@@ -30,7 +30,7 @@ public class Shooting : MonoBehaviour
             objBullet.SetActive(false);
             bulletList.Add(objBullet);
         }
-        //bulletAudio = GetComponent<AudioSource>();
+        bulletAudio = GetComponent<AudioSource>();
         ammo = GameObject.FindGameObjectWithTag("Gun").GetComponent<Upgrade>().ammunation;
         reload = ammo;
         reloadSpeed = GameObject.FindGameObjectWithTag("Gun").GetComponent<Upgrade>().reloadSpeed;
@@ -64,7 +64,7 @@ public class Shooting : MonoBehaviour
 
 
             //Play Audio
-           // bulletAudio.Play();
+            bulletAudio.Play();
 
     }
 
@@ -80,7 +80,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             CancelInvoke("reloading");
-            if (ammo > 0 )
+            if (ammo > 0 && (Time.timeScale == 1))
             {
                 Fire();
                 

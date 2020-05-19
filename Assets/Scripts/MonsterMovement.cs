@@ -124,7 +124,7 @@ public class MonsterMovement : MonoBehaviour
         }
         if (other.tag == "Player")
         {
-            killed();
+            Destroy(gameObject);
             Upgrade.damagedHp(1); //1 represents the health lowerd from player
         }
         if (other.tag == "Gun")
