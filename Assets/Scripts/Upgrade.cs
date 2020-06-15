@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
+using UnityEngine.Advertisements;
 
 public class Upgrade : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Upgrade : MonoBehaviour
     private float rotationSpeed;
     public float limit = 3;
     public float upgradePrice = 10;
+    private static bool fired = false;
 
     public float damage;
     public static float health = 1;
@@ -32,12 +34,17 @@ public class Upgrade : MonoBehaviour
     public Text healthLvlText;
     public Text damageLvlText;
     public Text pointsText;
+    private string playStoreId = "3656291";
+    private string InterAd = "video";
 
+    public bool isTargetPlayStore ;
+    public bool isTest;
     public float count = 0;
     public float count2 = 0;
     public GameObject panel;
     void Start()
     {
+        AdInit();
         prepareStats();
         points = PlayerPrefs.GetFloat("points");
 
@@ -58,9 +65,17 @@ public class Upgrade : MonoBehaviour
 
         if (health == 0)
         {
-            count = 1;
-            panel.SetActive(true);
-            Time.timeScale = 0;
+            if (!fired)
+            {
+                PlayAD();
+            }
+            if (!Advertisement.isShowing)
+            {
+                count = 1;
+
+                panel.SetActive(true);
+                Time.timeScale = 0;
+            }
         }
         
             
@@ -251,6 +266,22 @@ public class Upgrade : MonoBehaviour
     public void reducePoints(float value)
     {
         points -= value;
+    }
+
+    private void AdInit()
+    {
+        if (isTargetPlayStore) { Advertisement.Initialize(playStoreId, isTest);
+            fired = false;
+            return;}
+    }
+    private void PlayAD()
+    {
+        if(!Advertisement.IsReady(InterAd))
+        {
+            return;
+        }
+        Advertisement.Show();
+        fired = true;
     }
 
 }
